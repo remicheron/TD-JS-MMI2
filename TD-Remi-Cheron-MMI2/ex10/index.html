@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex10</title>
+</head>
+<body>
+    
+    <p>
+        <input type="text" id="input" placeholder="Enter word(s)"> 
+        <button onclick="ajouter()">Add to sentence</button>
+        <button onclick="reset()">Reset sentence</button>
+        <br>Sentence result : <b><span id="result"></span></b><br>
+      </p>
+<script>
+
+function ajouter(){
+    var text =document.getElementById('input').value;
+    document.getElementById('result').innerHTML+= text;
+}
+function reset(){
+    var text = "";
+    document.getElementById('result').innerHTML= text;
+}
+</script>
+
+</body>
+</html>

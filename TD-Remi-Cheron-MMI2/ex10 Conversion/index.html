@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex9 mini jeu</title>
+</head>
+<body>
+    
+    <p>
+        <input type="text" id="input1" placeholder="degre to Fahre">
+        <br>en fahr : <b><span id="dtof"></span></b><br>
+        <button onclick="conversion1()">conversion dtof</button>
+        <br><br>
+        <input type="text" id="input2" placeholder="euro to dollar">
+        <br>en dollar : <b><span id="etod"></span></b><br>
+        <button onclick="conversion2()">clnversion etod</button>
+        <br><br>
+        <input type="text" id="input3" placeholder="pound to euro">
+        <br>en euro : <b><span id="ptoe"></span></b><br>
+        <button onclick="conversion3()">clnversion ptoe</button>
+    </p>
+
+<script>
+
+function conversion1(){
+    var degre = document.getElementById('input1').value;
+    var fahr = (degre * (9/5)) + 32;
+    document.getElementById('dtof').innerHTML= fahr;
+}
+function conversion2(){
+    var euro = document.getElementById('input2').value;
+    var dollar = euro * 1.1;
+    document.getElementById('etod').innerHTML= dollar;
+}
+function conversion3(){
+    var pound = document.getElementById('input3').value;
+    var euro1 = pound * 1.2;
+    document.getElementById('ptoe').innerHTML= euro1;
+}
+
+</script>
+
+</body>
+</html>

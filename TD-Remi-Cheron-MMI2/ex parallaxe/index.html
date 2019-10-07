@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>paralaxe</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  </head>
+
+  <body onscroll="mafonction()">
+
+
+        <style >
+                #bgimage{
+                  background: url("image.jpg");
+                  width: 110%;
+                  height: 110%;
+                  background-size: cover;
+                }
+        </style>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="bgimage" style="height: 900px;">
+                <br><br><br><br><br><br><br><br>
+            <div class="text-center">
+                <h1 class="text-warning display-1">Whistler - Canada</h1>
+            </div>
+        </div>  
+
+    <script>
+
+function mafonction(){
+    document.getElementById("bgimage").style.backgroundPositionY = -window.scrollY / 2 + "px";
+}
+
+    </script>
+
+  </body>
+</html>

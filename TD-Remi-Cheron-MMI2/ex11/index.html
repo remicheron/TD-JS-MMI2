@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex11</title>
+</head>
+<body>
+    
+    <p>
+        <input type="text" id="input" placeholder="mise $$"> 
+        <button onclick="generecote()">générer cote</button>
+        <button onclick="benefice()">benefice</button>
+        <br>cote : <b><span id="resultcote"></span></b><br>
+        <br>benefice : <b><span id="resultbenefice"></span></b><br>
+      </p>
+<script>
+
+
+
+function generecote(){
+    var cote = Math.floor(Math.random() * (10 - 1) + 1);
+    document.getElementById('resultcote').innerHTML = cote;
+}
+
+function benefice(){
+    var somme =document.getElementById('input').value;
+    var nbcote =document.getElementById('resultcote').innerHTML;
+    var bene = somme * nbcote;
+    document.getElementById('resultbenefice').innerHTML = bene;
+}
+
+</script>
+
+</body>
+</html>

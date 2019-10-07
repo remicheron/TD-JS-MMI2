@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex9</title>
+</head>
+<body>
+    
+    <input type="text" id="input1" placeholder="Enter Value in Kg"> 
+        => 
+        <b><span id="resultat1"></span></b><br>
+        <button onclick="convertToPound()">Convert Kg to Pounds</button>
+      </p>
+      <p>
+        <input type="text" id="input2" placeholder="Enter Value in Pound"> 
+        => 
+        <b><span id="resultat2"></span></b><br>
+        <button onclick="convertToKg()">Convert Pounds to Kg</button>
+      </p>
+
+<script>
+
+function convertToPound(){
+    var pound =document.getElementById('input1').value;
+    var result1 = pound * 2.2;
+    document.getElementById('resultat1').innerHTML= result1;
+
+}
+
+function convertToKg(){
+    var kg =document.getElementById('input2').value;
+    var result2 = kg * 0.4;
+    document.getElementById('resultat2').innerHTML= result2;
+
+}
+
+</script>
+
+</body>
+</html>

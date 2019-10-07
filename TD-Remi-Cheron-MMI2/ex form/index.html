@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form text</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  </head>
+
+<style>
+    
+body {
+    overflow: hidden;
+}
+
+.block{
+    height: 60rem;
+    width: 200%;
+}
+.block1{
+    height: 60rem;
+    width: 100%;
+}
+
+.goright{
+    margin-left: -125%;
+}
+
+</style>
+
+  <body>
+    <div class="container-fluid block bg-dark">
+
+                <div class="row flex-row flex-nowrap">
+    <div class="col block1" id="endroit1">
+
+        <br><br><br><br><br><br><br><br><br><br>
+    <div class="text-center text-light">
+        <h1>Pose ta question</h1>
+        <p>Par contre pas plus 25 caractères !</p>
+        
+        <br>
+
+        <input oninput="texttype()" type="email" class="col-4 form-control form-control-lg bg-secondary mx-auto text-light" id="zonedetext">
+
+        <span id="nbcara">0</span>/25
+        <br>
+        <span id="erreur" class="text-danger"></span>
+
+        <br><br>
+
+        <button onclick="action()" type="button" class="btn btn-dark border-light">CONFIRMER</button>
+    </div>
+
+    </div>
+
+    <div class="col block1 bg-secondary" id="endroit2">
+
+    <br><br><br><br><br><br><br><br><br><br>
+        <div class="text-center text-light">
+        <h1>Ta question est pris en compte</h1>
+        <p>attend un peu quand meme...</p>
+
+        <br><br><br><br>
+
+        <button onclick="retour()" type="button" class="btn btn-secondary border-light">AUTRE QUESTION</button>
+        </div>
+
+        </div>
+</div>
+</div>
+
+    <script>
+
+function texttype(){
+    var cara = document.getElementById('zonedetext').value.length;
+    document.getElementById("nbcara").innerHTML = cara;
+}
+
+function action(){
+    var cara = document.getElementById('zonedetext').value.length;
+    if(cara <= 25){
+        //var elmnt = document.getElementById("endroit2");
+        //  elmnt.scrollIntoView();
+        document.getElementById("endroit1").classList.add("goright");
+        document.getElementById("endroit1").style.transition="0.8s ease";
+
+    }else{
+        document.getElementById("erreur").innerHTML = "Trop de carctères";
+    }
+}
+
+function retour(){
+        //var elmnt = document.getElementById("endroit1");
+        //elmnt.scrollIntoView();
+        document.getElementById("endroit1").classList.remove("goright");
+        document.getElementById("endroit1").style.transition="0.8s ease";
+}
+
+    </script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex9 mini jeu</title>
+</head>
+<body>
+    
+    <p>
+        <input type="text" id="input1" placeholder="devine">
+        <br>vous avez saisi : <b><span id="saisi"></span></b><br>
+        <button onclick="controle()">c'est partiii</button>
+        <br>alors ? : <b><span id="result"></span></b><br>
+    </p>
+
+<script>
+
+var nombreRandom = Math.floor(Math.random() * (5 - 1) + 1);
+
+function controle(){
+    var nbuser = document.getElementById('input1').value;
+    document.getElementById('saisi').innerHTML= nbuser;
+
+if (nbuser < nombreRandom){
+    document.getElementById('result').innerHTML= "trop petit";
+}
+if (nbuser > nombreRandom){
+    document.getElementById('result').innerHTML= "trop grand";
+}
+if (nbuser == nombreRandom){
+    document.getElementById('result').innerHTML= "bingo";
+}
+
+}
+
+
+
+</script>
+
+</body>
+</html>

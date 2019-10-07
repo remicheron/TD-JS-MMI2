@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex13</title>
+</head>
+<body>
+    
+    <p>
+
+        <br>dimmension de la fenetre : <b><span id="dimension"></span></b><br>
+
+    </p>
+
+<script>
+
+function fizzbuzz() {
+    let prmpt = prompt("Entrez un entier : ");
+    let nmbre = parseInt(prmpt);
+    if(nmbre % 3 === 0) {
+        alert("Ce nombre est un multiple de 3");
+    }
+    if(nmbre % 7 === 0) {
+        alert("Ce nombre est un multiple de 7")
+    }
+    if(nmbre % 7 !== 0 && nmbre % 3 !== 0) {
+        alert("Ce nombre n'est ni un multiple de 3, ni un multiple de 7");
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex2.1</title>
+</head>
+<body>
+    
+        <p>
+                <input type="text" id="input1" placeholder="Enter Value">
+                / <input type="text" id="input2" placeholder="Enter Value"><span> = <b id="resultat"></b></span>
+                 <br>
+                <button onclick="divi()">Submit</button>  
+              </p>
+        
+
+
+<script>
+
+
+
+function divi(){
+        var nb_1 =document.getElementById('input1').value;
+        var nb_2 =document.getElementById('input2').value;
+        var result = nb_1 / nb_2;
+
+    document.getElementById('resultat').innerHTML = result;
+}
+
+
+</script>
+
+</body>
+</html>
